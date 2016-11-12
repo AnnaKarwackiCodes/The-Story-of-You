@@ -79,6 +79,7 @@
     <Compile Include="Assets\Script\DialogueSystem.cs" />
     <Compile Include="Assets\Script\MasterText.cs" />
     <Compile Include="Assets\Script\MenuSystem.cs" />
+    <Compile Include="Assets\Script\PlotPoint.cs" />
     <Compile Include="Assets\Script\WorldObject.cs" />
   </ItemGroup>
   <ItemGroup>

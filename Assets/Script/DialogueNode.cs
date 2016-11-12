@@ -25,6 +25,11 @@ public class DialogueNode {
     {
         get { return options; }
     }
+
+    public int OptNum
+    {
+        get { return optNum; }
+    }
     public void setOptions(DialogueNode o1)
     {
         options[0] = o1;
@@ -47,4 +52,7 @@ public class DialogueNode {
         options[2] = o3;
         options[3] = o4;
     }
+
+    
+
 }
