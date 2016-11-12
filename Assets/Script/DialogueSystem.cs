@@ -49,17 +49,27 @@ public class DialogueSystem : MonoBehaviour {
                 {
                     options.transform.GetChild(i).GetChild(0).GetComponent<Text>().text = temp[i].GetPrompt;
                 }
+                else
+                {
+                    options.transform.GetChild(i).gameObject.SetActive(false);
+                }
             }
         }
     }
     IEnumerator OptionsAppear() //to use this need to calle the method with StartCoroutine
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
+        getOptionsReady();
     }
     public bool ShowText
     {
         get { return showText; }
-        set { textBox.SetActive(value); }
+        set
+        {
+
+            textBox.SetActive(value);
+            ShowOptions = true;
+        }
     }
     public bool ShowOptions
     {
@@ -67,6 +77,10 @@ public class DialogueSystem : MonoBehaviour {
         set
         {
             textBox.SetActive(value);
+            if (value)
+            {
+                StartCoroutine(OptionsAppear());
+            }
         }
     }
 
@@ -76,5 +90,10 @@ public class DialogueSystem : MonoBehaviour {
         {
             textBox.transform.GetChild(0).GetComponent<Text>().text = value;
         }
+    }
+    public DialogueNode CurrentNode
+    {
+        get { return currentNode; }
+        set { currentNode = value; }
     }
 }

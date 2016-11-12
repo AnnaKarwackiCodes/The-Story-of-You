@@ -7,7 +7,7 @@ public class PlotPoint : MonoBehaviour {
     float maxDistance = 1.0f;
     GameObject WO;
 
-    public DialogueNode talk;
+    public string Point;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,8 @@ public class PlotPoint : MonoBehaviour {
         WO = GameObject.Find("WorldObject");
         WO.GetComponent<DialogueSystem>().ShowText = false;
         WO.GetComponent<DialogueSystem>().ShowOptions = false;
+        WO.GetComponent<DialogueSystem>().CurrentNode = WO.GetComponent<MasterText>().GetNode(Point);
+        WO.GetComponent<DialogueSystem>().SetTextBox = WO.GetComponent<DialogueSystem>().CurrentNode.GetPrompt;
     }
 	
 	// Update is called once per frame
@@ -35,7 +37,6 @@ public class PlotPoint : MonoBehaviour {
         if (distance <= maxDistance)
         {
             WO.GetComponent<DialogueSystem>().ShowText = true;
-            WO.GetComponent<DialogueSystem>().SetTextBox = talk.GetPrompt;
         }
     }
 }
