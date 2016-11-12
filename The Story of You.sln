@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Story of You.CSharp.Plugins", "The Story of You.CSharp.Plugins.csproj", "{CE98ABBB-9217-F6D1-527B-64679EEFE642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Story of You.CSharp", "The Story of You.CSharp.csproj", "{6BEA4D47-C772-8844-97D3-E066987C4537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Story of You.CSharp.Editor", "The Story of You.CSharp.Editor.csproj", "{F4AA1ED6-1BB0-DC4F-41B3-CEBF93A0472B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE98ABBB-9217-F6D1-527B-64679EEFE642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE98ABBB-9217-F6D1-527B-64679EEFE642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE98ABBB-9217-F6D1-527B-64679EEFE642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE98ABBB-9217-F6D1-527B-64679EEFE642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BEA4D47-C772-8844-97D3-E066987C4537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEA4D47-C772-8844-97D3-E066987C4537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEA4D47-C772-8844-97D3-E066987C4537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEA4D47-C772-8844-97D3-E066987C4537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4AA1ED6-1BB0-DC4F-41B3-CEBF93A0472B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4AA1ED6-1BB0-DC4F-41B3-CEBF93A0472B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4AA1ED6-1BB0-DC4F-41B3-CEBF93A0472B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4AA1ED6-1BB0-DC4F-41B3-CEBF93A0472B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
