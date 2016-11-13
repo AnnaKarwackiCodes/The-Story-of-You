@@ -35,6 +35,14 @@ public class DialogueSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (showOptions)
+        {
+            StartCoroutine(OptionsAppear());
+        }
+        else
+        {
+            Debug.Log("there might be an issue");
+        }
 	}
 
     void getOptionsReady()
@@ -56,6 +64,24 @@ public class DialogueSystem : MonoBehaviour {
             }
         }
     }
+
+    public void PressOP1()
+    {
+        currentNode = currentNode.Options[0];
+    }
+    public void PressOP2()
+    {
+        currentNode = currentNode.Options[1];
+    }
+    public void PressOP3()
+    {
+        currentNode = currentNode.Options[2];
+    }
+    public void PressOP4()
+    {
+        currentNode = currentNode.Options[3];
+    }
+
     IEnumerator OptionsAppear() //to use this need to calle the method with StartCoroutine
     {
         yield return new WaitForSeconds(2);
@@ -64,23 +90,15 @@ public class DialogueSystem : MonoBehaviour {
     public bool ShowText
     {
         get { return showText; }
-        set
-        {
-
-            textBox.SetActive(value);
-            ShowOptions = true;
-        }
+        set { textBox.SetActive(value);}
     }
     public bool ShowOptions
     {
         get { return showOptions; }
         set
         {
+            showOptions = value;
             textBox.SetActive(value);
-            if (value)
-            {
-                StartCoroutine(OptionsAppear());
-            }
         }
     }
 

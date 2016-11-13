@@ -37,6 +37,7 @@ public class PlotPoint : MonoBehaviour {
         if (distance <= maxDistance)
         {
             WO.GetComponent<DialogueSystem>().ShowText = true;
+            WO.GetComponent<DialogueSystem>().ShowOptions = true;
         }
     }
 }
